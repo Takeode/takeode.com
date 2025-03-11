@@ -17,7 +17,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'takeode', // Usually your GitHub org/user name.
+  organizationName: 'Takeode', // Usually your GitHub org/user name.
   projectName: 'takeode.com', // Usually your repo name.
 
   onBrokenLinks: 'throw',
