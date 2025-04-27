@@ -28,4 +28,4 @@ This command generates static content into the `build` directory and can be serv
 
 ### Deployment
 
-O deploy já é feito automaticamente com o Github Actions, sempre que um commit é feito na branch main. O deploy é feito no Github Pages, e o site pode ser acessado em [takeode.com](takedo.com).
+O deploy já é feito automaticamente com o Github Actions, sempre que um commit é feito na branch main. O deploy é feito no Github Pages, e o site pode ser acessado em [takeode.com](takeode.com).
