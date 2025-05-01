@@ -4,7 +4,7 @@ import Heading from "@theme/Heading";
 import Layout from "@theme/Layout";
 import clsx from "clsx";
 import { motion } from "framer-motion"; // Import framer-motion
-import { useState, type ReactNode } from "react";
+import { type ReactNode, useState } from "react";
 
 import styles from "./index.module.css"; // Reuse existing CSS module
 
@@ -99,7 +99,7 @@ function ServicesSection() {
         <div className={clsx("row", styles.servicesGrid)}>
           {services.map((service, idx) => (
             <motion.div
-              key={idx}
+              key={service.title}
               className={clsx("col col--4", styles.serviceCard)}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -336,8 +336,8 @@ function DifferentialsSection() {
         <div className={clsx("row", styles.differentialsGrid)}>
           {differentials.map((item, idx) => (
             <motion.div
-              key={idx}
-              className={clsx("col col--3", styles.differentialItem)} // Adjust col size as needed
+              key={item.title}
+              className={clsx("col col--3", styles.differentialItem)}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -399,7 +399,7 @@ function BusinessModelSection() {
             <ol className={styles.businessModelSteps}>
               {steps.map((step, idx) => (
                 <motion.li
-                  key={idx}
+                  key={step}
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -498,6 +498,7 @@ function TestimonialsSection() {
         {/* Simplified Carousel Placeholder */}
         <div className={styles.testimonialCarousel}>
           <button
+            type="button"
             onClick={prevTestimonial}
             className={styles.carouselButton}
             aria-label="Depoimento anterior"
@@ -521,6 +522,7 @@ function TestimonialsSection() {
             <p className={styles.testimonialName}>- {name}</p>
           </motion.div>
           <button
+            type="button"
             onClick={nextTestimonial}
             className={styles.carouselButton}
             aria-label="Próximo depoimento"
@@ -677,9 +679,8 @@ function FaqItem({ item, isOpen, onClick }) {
           +
         </motion.span>
       </motion.button>
-      <motion.div
+      <motion.section
         id={`${uniqueId}-answer`} // Use unique ID
-        role="region" // Better accessibility for accordion panels
         aria-labelledby={`${uniqueId}-question`} // Associate with button if needed, though aria-controls is primary
         className={styles.faqAnswer}
         initial={false} // Don't animate on initial load unless open
@@ -696,7 +697,7 @@ function FaqItem({ item, isOpen, onClick }) {
         <div style={{ paddingBottom: "1px" }}>
           <p>{item.a}</p>
         </div>
-      </motion.div>
+      </motion.section>
     </div>
   );
 }
@@ -715,14 +716,17 @@ function FaqSection() {
           Perguntas Frequentes
         </Heading>
         <div className={styles.faqList}>
-          {faqItems.map((item, idx) => (
-            <FaqItem
-              key={idx}
-              item={item}
-              isOpen={openIndex === idx}
-              onClick={() => handleClick(idx)}
-            />
-          ))}
+          {faqItems.map((item, idx) => {
+            const key = item.q;
+            return (
+              <FaqItem
+                key={key}
+                item={item}
+                isOpen={openIndex === idx}
+                onClick={() => handleClick(idx)}
+              />
+            );
+          })}
         </div>
       </div>
     </section>
@@ -784,7 +788,7 @@ function CustomFooter() {
                 <PlaceholderIcon width="24" height="24" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/takeode"
                 aria-label="LinkedIn"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -792,7 +796,7 @@ function CustomFooter() {
                 <PlaceholderIcon width="24" height="24" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/takeode"
                 aria-label="Instagram"
                 target="_blank"
                 rel="noopener noreferrer"

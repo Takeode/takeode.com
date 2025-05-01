@@ -1,39 +1,39 @@
-import type * as Preset from '@docusaurus/preset-classic';
-import type { Config } from '@docusaurus/types';
-import { themes as prismThemes } from 'prism-react-renderer';
+import type * as Preset from "@docusaurus/preset-classic";
+import type { Config } from "@docusaurus/types";
+import { themes as prismThemes } from "prism-react-renderer";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Takeode',
-  tagline: 'Do conceito ao código, sem atalhos.',
-  favicon: 'img/favicon.ico',
+  title: "Takeode",
+  tagline: "Do conceito ao código, sem atalhos.",
+  favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: 'https://takeode.com',
+  url: "https://takeode.com",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Takeode', // Usually your GitHub org/user name.
-  projectName: 'takeode.com', // Usually your repo name.
+  organizationName: "Takeode", // Usually your GitHub org/user name.
+  projectName: "takeode.com", // Usually your repo name.
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       {
         docs: false,
         // docs: {
@@ -46,7 +46,7 @@ const config: Config = {
         blog: {
           showReadingTime: true,
           feedOptions: {
-            type: ['rss', 'atom'],
+            type: ["rss", "atom"],
             xslt: true,
           },
           // Please change this to your repo.
@@ -54,12 +54,12 @@ const config: Config = {
           // editUrl:
           //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          onInlineTags: "warn",
+          onInlineAuthors: "warn",
+          onUntruncatedBlogPosts: "warn",
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       } satisfies Preset.Options,
     ],
@@ -67,12 +67,12 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/social-card.jpg',
+    image: "img/social-card.jpg",
     navbar: {
-      title: 'Takeode',
+      title: "Takeode",
       logo: {
-        alt: 'Takeode Logo',
-        src: 'img/logo.svg',
+        alt: "Takeode Logo",
+        src: "img/logo.svg",
       },
       items: [
         // {
@@ -81,7 +81,7 @@ const config: Config = {
         //   position: 'left',
         //   label: 'Tutorial',
         // },
-        { to: '/blog', label: 'Blog', position: 'right' },
+        { to: "/blog", label: "Blog", position: "right" },
         // {
         //   href: 'https://github.com/Takeode/takeode.com',
         //   label: 'GitHub',
@@ -90,7 +90,7 @@ const config: Config = {
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         // {
         //   title: 'Docs',
@@ -102,28 +102,28 @@ const config: Config = {
         //   ],
         // },
         {
-          title: 'Comunidade',
+          title: "Comunidade",
           items: [
             {
-              label: 'X',
-              href: 'https://x.com/takeode_',
+              label: "X",
+              href: "https://x.com/takeode_",
             },
             {
-              label: 'Instagram',
-              href: 'https://www.instagram.com/takeodesolutions',
-            }
+              label: "Instagram",
+              href: "https://www.instagram.com/takeodesolutions",
+            },
           ],
         },
         {
-          title: 'Mais',
+          title: "Mais",
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: "Blog",
+              to: "/blog",
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/Takeode',
+              label: "GitHub",
+              href: "https://github.com/Takeode",
             },
           ],
         },

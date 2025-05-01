@@ -9,7 +9,11 @@
   position: relative;
   overflow: hidden;
   /* Example Gradient Background */
-  background: linear-gradient(45deg, var(--ifm-color-primary-dark), var(--ifm-color-primary-light));
+  background: linear-gradient(
+    45deg,
+    var(--ifm-color-primary-dark),
+    var(--ifm-color-primary-light)
+  );
   color: white; /* Ensure text is readable */
 }
 
@@ -95,10 +99,9 @@
 }
 
 .serviceCard p {
-    flex-grow: 1; /* Allow description to take available space */
-    margin-bottom: 1.5rem; /* Space before button */
+  flex-grow: 1; /* Allow description to take available space */
+  margin-bottom: 1.5rem; /* Space before button */
 }
-
 
 .serviceIcon {
   height: 60px;
@@ -133,7 +136,7 @@
 }
 
 .formGroup {
-    position: relative; /* For error message positioning */
+  position: relative; /* For error message positioning */
 }
 
 .formInput {
@@ -150,20 +153,19 @@
 }
 
 .inputError {
-    border-color: var(--ifm-color-danger);
+  border-color: var(--ifm-color-danger);
 }
 
 .errorMessage {
-    color: var(--ifm-color-danger-light); /* Lighter red for dark bg */
-    font-size: 0.8rem;
-    margin-top: 0.25rem;
-    display: block;
+  color: var(--ifm-color-danger-light); /* Lighter red for dark bg */
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: block;
 }
 
-[data-theme='light'] .errorMessage {
-    color: var(--ifm-color-danger-dark); /* Darker red for light bg */
+[data-theme="light"] .errorMessage {
+  color: var(--ifm-color-danger-dark); /* Darker red for light bg */
 }
-
 
 .ctaButton {
   margin-top: 1rem;
@@ -171,214 +173,214 @@
 
 /* --- Differentials Section --- */
 .differentialsGrid {
-    margin-top: 3rem;
-    gap: 2rem 0;
+  margin-top: 3rem;
+  gap: 2rem 0;
 }
 
 .differentialItem {
-    padding: 1.5rem;
-    border-radius: var(--ifm-global-radius);
-    /* Optional: Add subtle border or background */
-    /* border: 1px solid var(--ifm-color-emphasis-200); */
-    background-color: var(--ifm-card-background-color);
-    box-shadow: var(--ifm-global-shadow-lw);
+  padding: 1.5rem;
+  border-radius: var(--ifm-global-radius);
+  /* Optional: Add subtle border or background */
+  /* border: 1px solid var(--ifm-color-emphasis-200); */
+  background-color: var(--ifm-card-background-color);
+  box-shadow: var(--ifm-global-shadow-lw);
 }
 
 .differentialIcon {
-    height: 50px;
-    width: 50px;
-    margin-bottom: 1rem;
-    color: var(--ifm-color-primary-light);
+  height: 50px;
+  width: 50px;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary-light);
 }
 
 .differentialTitle {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
 }
 
 /* --- Business Model Section --- */
 .businessModelSection {
-    background-color: var(--ifm-background-surface-color);
+  background-color: var(--ifm-background-surface-color);
 }
 
 .businessModelContent {
-    align-items: center; /* Vertically align columns */
-    margin-top: 3rem;
+  align-items: center; /* Vertically align columns */
+  margin-top: 3rem;
 }
 
 .businessModelImage {
-    width: 100%;
-    max-width: 400px; /* Limit image size */
-    height: auto;
-    display: block;
-    margin: 0 auto; /* Center image if needed */
-    border-radius: var(--ifm-global-radius);
-    color: var(--ifm-color-primary); /* Placeholder color */
+  width: 100%;
+  max-width: 400px; /* Limit image size */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Center image if needed */
+  border-radius: var(--ifm-global-radius);
+  color: var(--ifm-color-primary); /* Placeholder color */
 }
 
 .businessModelSteps {
-    list-style: none; /* Remove default numbering */
-    padding-left: 0;
-    margin-top: 1.5rem;
-    counter-reset: step-counter; /* Initialize counter */
+  list-style: none; /* Remove default numbering */
+  padding-left: 0;
+  margin-top: 1.5rem;
+  counter-reset: step-counter; /* Initialize counter */
 }
 
 .businessModelSteps li {
-    position: relative;
-    padding-left: 2.5rem; /* Space for number */
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-    line-height: 1.6;
+  position: relative;
+  padding-left: 2.5rem; /* Space for number */
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 .businessModelSteps li::before {
-    counter-increment: step-counter; /* Increment counter */
-    content: counter(step-counter); /* Display counter */
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 1.8rem;
-    height: 1.8rem;
-    background-color: var(--ifm-color-primary);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 0.9rem;
+  counter-increment: step-counter; /* Increment counter */
+  content: counter(step-counter); /* Display counter */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
 }
 
 /* --- Testimonials Section --- */
 .testimonialCarousel {
-    position: relative;
-    max-width: 700px;
-    margin: 3rem auto;
-    padding: 2rem;
-    background-color: var(--ifm-card-background-color);
-    border-radius: var(--ifm-card-border-radius);
-    box-shadow: var(--ifm-global-shadow-md);
-    text-align: center;
-    overflow: hidden; /* Ensure content stays within bounds */
+  position: relative;
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: var(--ifm-card-background-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-global-shadow-md);
+  text-align: center;
+  overflow: hidden; /* Ensure content stays within bounds */
 }
 
 .carouselButton {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: var(--ifm-color-primary);
-    cursor: pointer;
-    padding: 0.5rem;
-    z-index: 10;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--ifm-color-primary);
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 10;
 }
 
-.carouselButton:first-of-type { /* Previous button */
-    left: 1rem;
+.carouselButton:first-of-type {
+  /* Previous button */
+  left: 1rem;
 }
 
-.carouselButton:last-of-type { /* Next button */
-    right: 1rem;
+.carouselButton:last-of-type {
+  /* Next button */
+  right: 1rem;
 }
 
 .testimonialPhoto {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-    border: 3px solid var(--ifm-color-primary-light);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid var(--ifm-color-primary-light);
 }
 
 .testimonialComment {
-    font-style: italic;
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    color: var(--ifm-color-emphasis-800);
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-emphasis-800);
 }
 
 .testimonialName {
-    font-weight: bold;
-    color: var(--ifm-font-color-secondary);
+  font-weight: bold;
+  color: var(--ifm-font-color-secondary);
 }
 
 .feedbackFormContainer {
-    margin-top: 4rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+  margin-top: 4rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .feedbackForm {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 .feedbackSuccess {
-    color: var(--ifm-color-success);
-    text-align: center;
-    font-weight: bold;
-    margin-top: 1.5rem;
+  color: var(--ifm-color-success);
+  text-align: center;
+  font-weight: bold;
+  margin-top: 1.5rem;
 }
-
 
 /* --- FAQ Section --- */
 .faqSection {
-    background-color: var(--ifm-background-surface-color);
+  background-color: var(--ifm-background-surface-color);
 }
 
 .faqList {
-    max-width: 800px;
-    margin: 3rem auto 0;
-    border: 1px solid var(--ifm-color-emphasis-300);
-    border-radius: var(--ifm-global-radius);
-    overflow: hidden; /* Clip corners */
+  max-width: 800px;
+  margin: 3rem auto 0;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  overflow: hidden; /* Clip corners */
 }
 
 .faqItem {
-    border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
 }
 
 .faqItem:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .faqQuestion {
-    background: none;
-    border: none;
-    width: 100%;
-    text-align: left;
-    padding: 1rem 1.5rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--ifm-font-color-base);
-    transition: background-color 0.2s ease;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--ifm-font-color-base);
+  transition: background-color 0.2s ease;
 }
 
 .faqIcon {
-    font-size: 1.5rem;
-    font-weight: 300;
-    line-height: 1;
-    color: var(--ifm-color-primary);
-    transition: transform 0.2s ease; /* Animate icon rotation */
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--ifm-color-primary);
+  transition: transform 0.2s ease; /* Animate icon rotation */
 }
 
 .faqAnswer {
-    padding: 0 1.5rem; /* Padding applied internally */
-    color: var(--ifm-color-emphasis-800);
-    line-height: 1.7;
-    /* Height, opacity, margin controlled by framer-motion */
+  padding: 0 1.5rem; /* Padding applied internally */
+  color: var(--ifm-color-emphasis-800);
+  line-height: 1.7;
+  /* Height, opacity, margin controlled by framer-motion */
 }
-
 
 /* --- Footer Section --- */
 /* Styles for the custom footer if used */
@@ -386,87 +388,87 @@
   background-color: var(--ifm-footer-background-color);
   color: var(--ifm-footer-color);
   /* Ensure padding matches other sections if used instead of theme footer */
-   /* padding: 4rem 0; */
+  /* padding: 4rem 0; */
 }
 
 .footerCol {
-    margin-bottom: 2rem; /* Spacing on mobile */
+  margin-bottom: 2rem; /* Spacing on mobile */
 }
 
 @media (min-width: 768px) {
-    .footerCol {
-        margin-bottom: 0;
-    }
+  .footerCol {
+    margin-bottom: 0;
+  }
 }
 
-
 .footerLogo {
-    margin-bottom: 1rem;
-    max-height: 40px; /* Adjust size */
-    width: auto;
-    display: inline-block; /* Ensure link wrapping works well */
+  margin-bottom: 1rem;
+  max-height: 40px; /* Adjust size */
+  width: auto;
+  display: inline-block; /* Ensure link wrapping works well */
 }
 
 .footerTagline {
-    font-size: 0.9rem;
-    opacity: 0.8;
+  font-size: 0.9rem;
+  opacity: 0.8;
 }
 
 .footerLinks {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 .footerLinks li {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .footerLinks a {
-    color: var(--ifm-footer-link-color);
-    text-decoration: none;
-    transition: color 0.2s ease;
+  color: var(--ifm-footer-link-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .footerLinks a:hover {
-    color: var(--ifm-footer-link-hover-color);
-    text-decoration: var(--ifm-link-hover-decoration);
+  color: var(--ifm-footer-link-hover-color);
+  text-decoration: var(--ifm-link-hover-decoration);
 }
 
 .socialLinks {
-    display: flex;
-    gap: 1rem;
-    margin-top: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
 }
 
 .socialLinks a {
-    color: var(--ifm-footer-color);
-    opacity: 0.8;
-    transition: opacity 0.2s ease;
-    display: inline-block; /* Ensure proper sizing */
-    line-height: 0; /* Prevent extra space below icons */
+  color: var(--ifm-footer-color);
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+  display: inline-block; /* Ensure proper sizing */
+  line-height: 0; /* Prevent extra space below icons */
 }
 
 .socialLinks a:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
-.socialLinks svg { /* Style the placeholder */
-    fill: currentColor;
-    width: 24px; /* Explicit size */
-    height: 24px;
+.socialLinks svg {
+  /* Style the placeholder */
+  fill: currentColor;
+  width: 24px; /* Explicit size */
+  height: 24px;
 }
 
 .footerCopyright {
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--ifm-color-emphasis-300);
-    font-size: 0.9rem;
-    opacity: 0.8;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+  font-size: 0.9rem;
+  opacity: 0.8;
 }
 
 .footerCopyright a {
-    color: var(--ifm-footer-link-color);
+  color: var(--ifm-footer-link-color);
 }
 
 /* Visually Hidden Class (for labels) */
