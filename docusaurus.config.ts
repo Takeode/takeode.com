@@ -6,11 +6,11 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 const config: Config = {
   title: 'Takeode',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Do conceito ao código, sem atalhos.',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://www.takeode.com',
+  url: 'https://takeode.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -35,13 +35,14 @@ const config: Config = {
     [
       'classic',
       {
-        docs: {
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        docs: false,
+        // docs: {
+        //   sidebarPath: './sidebars.ts',
+        //   // Please change this to your repo.
+        //   // Remove this to remove the "edit this page" links.
+        //   // editUrl:
+        //   //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        // },
         blog: {
           showReadingTime: true,
           feedOptions: {
@@ -50,8 +51,8 @@ const config: Config = {
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl:
+          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -66,59 +67,55 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'Takeode',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Takeode Logo',
         src: 'img/logo.svg',
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
-        },
-        { to: '/blog', label: 'Blog', position: 'left' },
-        {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
-        },
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'tutorialSidebar',
+        //   position: 'left',
+        //   label: 'Tutorial',
+        // },
+        { to: '/blog', label: 'Blog', position: 'right' },
+        // {
+        //   href: 'https://github.com/Takeode/takeode.com',
+        //   label: 'GitHub',
+        //   position: 'right',
+        // },
       ],
     },
     footer: {
       style: 'dark',
       links: [
+        // {
+        //   title: 'Docs',
+        //   items: [
+        //     {
+        //       label: 'Tutorial',
+        //       to: '/docs/intro',
+        //     },
+        //   ],
+        // },
         {
-          title: 'Docs',
+          title: 'Comunidade',
           items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
             {
               label: 'X',
-              href: 'https://x.com/docusaurus',
+              href: 'https://x.com/takeode_',
             },
+            {
+              label: 'Instagram',
+              href: 'https://www.instagram.com/takeodesolutions',
+            }
           ],
         },
         {
-          title: 'More',
+          title: 'Mais',
           items: [
             {
               label: 'Blog',
@@ -126,12 +123,12 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/Takeode',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Takeode, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Takeode, Inc.`,
     },
     prism: {
       theme: prismThemes.github,
