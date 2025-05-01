@@ -1,14 +1,35 @@
 joao:
   name: João Pedro
-  title: Co-founder @ Takeode
+  title: Co-founder and COO @ Takeode
+  url: https://github.com/joao1barbosa
+  image_url: https://github.com/joao1barbosa.png
+  page: true
+  socials:
+    x: joao1barbosa_
+    github: joao1barbosa
+    linkedin: joao1barbosa
 
 matheus:
   name: Matheus Alencar
-  title: Co-founder @ Takeode
+  title: Co-founder and CMO @ Takeode
+  url: https://github.com/matheusalencardsgn
+  image_url: https://github.com/matheusalencardsgn.png
+  page: true
+  socials:
+    x: apenasaedes
+    github: matheusalencardsgn
+    linkedin: alencardsgn
 
 pauloe:
   name: Paulo Éder
-  title: Co-founder @ Takeode
+  title: Co-founder and CEO @ Takeode
+  url: https://github.com/paulo-cardoso71
+  image_url: https://github.com/paulo-cardoso71.png
+  page: true
+  socials:
+    x: pcardoso0308
+    github: paulo-cardoso71
+    linkedin: paulo-cardoso71
 
 pauloh:
   name: Paulo Hernane
