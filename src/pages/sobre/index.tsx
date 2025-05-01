@@ -2,6 +2,47 @@ import React, { ReactNode } from "react";
 import Layout from "@theme/Layout";
 import styles from "./about.module.css";
 import clsx from "clsx";
+import {
+  UserCheck,
+  SlidersHorizontal,
+  Eye,
+  Lightbulb,
+  Handshake,
+  Gauge,
+} from "lucide-react";
+
+const values = [
+  {
+    icon: <UserCheck size={44} />,
+    title: "Autonomia",
+    text: "Confiamos nas pessoas e em seu potencial criativo.",
+  },
+  {
+    icon: <SlidersHorizontal size={42} />,
+    title: "Simplicidade",
+    text: "Acreditamos que o simples funciona melhor.",
+  },
+  {
+    icon: <Eye size={42} />,
+    title: "Transparência",
+    text: "Comunicamos com clareza e mostramos o que fazemos.",
+  },
+  {
+    icon: <Lightbulb size={42} />,
+    title: "Inovação com Propósito",
+    text: "Desenvolvemos soluções com significado.",
+  },
+  {
+    icon: <Handshake size={42} />,
+    title: "Parceria",
+    text: "Crescemos junto com nossos clientes.",
+  },
+  {
+    icon: <Gauge size={42} />,
+    title: "Eficiência",
+    text: "Fazemos mais com menos — e com qualidade.",
+  },
+];
 
 export default function About(): ReactNode {
   return (
@@ -16,52 +57,45 @@ export default function About(): ReactNode {
       </div>
 
       <main className={clsx("container", styles.mainContent)}>
-        <section>
-          <p>
-            Quatro amigos com quase uma década de amizade, unidos pelo desejo de
-            construir algo significativo juntos. Desde 2016, quando nos
-            conhecemos durante o ensino médio técnico em informática, mantivemos
-            o contato e a parceria. Hoje, unimos nossas habilidades e
-            experiências para formar uma aceleradora de MVPs, transformando
-            ideias em produtos digitais reais e escaláveis.
-          </p>
+        <section className={styles.whoweare}>
+          <div className={styles.highlight}>
+            <p>
+              Quatro amigos com quase uma década de amizade, unidos pelo desejo
+              de construir algo significativo juntos.
+            </p>
+          </div>
+          <div className={styles.description}>
+            <p>
+              Desde 2016, quando nos conhecemos durante o ensino médio técnico
+              em informática, mantivemos o contato e a parceria.
+            </p>
+            <p>
+              Hoje, unimos nossas habilidades e experiências para formar uma
+              aceleradora de MVPs, transformando ideias em produtos digitais
+              reais e escaláveis.
+            </p>
+          </div>
         </section>
 
-        <section>
+        <section className={styles.missionvalues}>
           <h2>Missão, Visão e Valores</h2>
           <h3>Missão</h3>
           <p>
             Transformar ideias em produtos digitais reais e escaláveis,
             entregando soluções relevantes com agilidade e propósito.
           </p>
-          <h3>Visão</h3>
-          <p>Ser referência em inovação acessível no Brasil até 2030.</p>
-          <h3>Valores</h3>
-          <ul>
-            <li>
-              <strong>Autonomia:</strong> Confiamos nas pessoas e em seu
-              potencial criativo.
-            </li>
-            <li>
-              <strong>Simplicidade:</strong> Acreditamos que o simples funciona
-              melhor.
-            </li>
-            <li>
-              <strong>Transparência:</strong> Comunicamos com clareza e
-              mostramos o que fazemos.
-            </li>
-            <li>
-              <strong>Inovação com Propósito:</strong> Desenvolvemos soluções
-              com significado.
-            </li>
-            <li>
-              <strong>Parceria:</strong> Crescemos junto com nossos clientes.
-            </li>
-            <li>
-              <strong>Eficiência:</strong> Fazemos mais com menos — e com
-              qualidade.
-            </li>
-          </ul>
+          <div className={styles.values}>
+            <h2>Valores</h2>
+            <div className={styles.valuesGrid}>
+              {values.map((item, id) => (
+                <div key={id} className={styles.valueCard}>
+                  <div>{item.icon}</div>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </section>
 
         <section>

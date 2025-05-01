@@ -1,5 +1,5 @@
 .hero {
-    background-image: url('/static/img/Capa-Notion.jpg'); /* Substitua com o caminho da imagem */
+    background-image: url('/static/img/about/Capa-Notion.jpg'); /* Substitua com o caminho da imagem */
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -9,32 +9,117 @@
     justify-content: center;
     text-align: center;
     color: white;
-  }
+}
   
-  .heroContent {
-    /* background-color: rgba(0, 0, 0, 0.5); */
+.heroContent {
     padding: 2rem;
     border-radius: 12px;
 
     h1 {
         font-size: 6rem;
     }
-  }
+}
   
-  .mainContent {
-    padding: 4rem 1rem;
-  }
-  
-  .cta {
+.mainContent {
+    padding: 2rem 1rem;
+}
+
+.whoweare {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .highlight{
+        background-color: rgba(0, 0, 0, 0.3);
+        width: 85%;
+        padding: 1rem 8rem;
+        border-radius: 12px;
+        margin-bottom: 2rem;
+
+        p{
+            font-size: 2.2rem;
+            font-weight: bold;
+        }
+    }
+
+    .description{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 3rem;
+        flex-wrap: wrap;
+        
+        padding: 0rem 4rem;
+        
+        p{
+            flex: 1 1 45%;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.missionvalues{ 
+    .values {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4rem 2rem;
+        margin: 0 auto;
+        width: 90%;
+
+        h2{
+            font-weight: bold;
+            font-size: 2rem;
+        }   
+
+        .valuesGrid{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: stretch;
+            justify-content: center;
+            width: 100%;
+
+            .valueCard{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                height: 100%;
+                max-width: 18rem;
+                border-radius: 12px;
+                border: 1px solid #ccc;
+                padding: 1rem;
+
+                h3{
+                    text-align: center;
+                }
+
+                p {
+                    text-align: center;
+                }
+            }
+
+            .valueCard:hover {
+                transform: translateY(-5px) rotate(1deg);
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+              }
+        }
+    }
+}
+
+.cta {
     margin-top: 4rem;
     text-align: center;
-  }
+
+    .links {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+}
   
-  .cta .links {
-    margin-top: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-  }
   
