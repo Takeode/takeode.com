@@ -1,0 +1,40 @@
+.hero {
+    background-image: url('/static/img/Capa-Notion.jpg'); /* Substitua com o caminho da imagem */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .heroContent {
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 2rem;
+    border-radius: 12px;
+
+    h1 {
+        font-size: 6rem;
+    }
+  }
+  
+  .mainContent {
+    padding: 4rem 1rem;
+  }
+  
+  .cta {
+    margin-top: 4rem;
+    text-align: center;
+  }
+  
+  .cta .links {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
