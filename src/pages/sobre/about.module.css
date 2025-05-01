@@ -1,5 +1,5 @@
 .hero {
-    background-image: url('/static/img/about/Capa-Notion.jpg'); /* Substitua com o caminho da imagem */
+    background-image: url('/static/img/about/banner.jpg'); /* Substitua com o caminho da imagem */
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -21,7 +21,10 @@
 }
   
 .mainContent {
+    display: flex;
+    flex-direction: column;
     padding: 2rem 1rem;
+    gap: 3rem;
 }
 
 .whoweare {
@@ -58,55 +61,123 @@
     }
 }
 
-.missionvalues{ 
-    .values {
+.mission{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+
+    .icon {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+
+        h2{
+            font-size: 2rem;
+        }
+    }
+
+    p{
+        max-width: 60%;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
+
+.values {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 90%;
+    gap: 1.3rem;
+
+    h2{
+        font-weight: bold;
+        font-size: 2rem;
+    }   
+
+    .valuesGrid{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: stretch;
+        justify-content: center;
+        width: 100%;
+
+        .valueCard{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            max-width: 18rem;
+            border-radius: 12px;
+            border: 1px solid #ccc;
+            padding: 1rem;
+
+            h3{
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+            }
+        }
+
+        .valueCard:hover {
+            transform: translateY(-5px) rotate(1deg);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+.story{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    align-items: center;
+
+    h2{
+        font-weight: bold;
+        font-size: 2rem;
+        margin-left: 2rem;
+        align-self: start;
+    }
+    
+    .storyGalery{
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        img{
+            max-width: 40%;
+            border-radius: 12px;
+            border: 1px solid #ccc;
+        }
+        img:hover {
+            transform: translateY(-5px) rotate(1deg);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    .storyText{
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 4rem 2rem;
-        margin: 0 auto;
-        width: 90%;
 
-        h2{
-            font-weight: bold;
-            font-size: 2rem;
-        }   
-
-        .valuesGrid{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 1rem;
-            align-items: stretch;
-            justify-content: center;
-            width: 100%;
-
-            .valueCard{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-between;
-                height: 100%;
-                max-width: 18rem;
-                border-radius: 12px;
-                border: 1px solid #ccc;
-                padding: 1rem;
-
-                h3{
-                    text-align: center;
-                }
-
-                p {
-                    text-align: center;
-                }
-            }
-
-            .valueCard:hover {
-                transform: translateY(-5px) rotate(1deg);
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-              }
+        p{
+            text-align: justify;
+            font-size: 1.1rem;
+            width: 90%;
         }
     }
+
 }
 
 .cta {

@@ -9,6 +9,7 @@ import {
   Lightbulb,
   Handshake,
   Gauge,
+  Target,
 } from "lucide-react";
 
 const values = [
@@ -44,6 +45,9 @@ const values = [
   },
 ];
 
+const campus1Img = require("@site/static/img/about/campus1.webp").default;
+const campus2Img = require("@site/static/img/about/campus2.webp").default;
+
 export default function About(): ReactNode {
   return (
     <Layout
@@ -77,37 +81,74 @@ export default function About(): ReactNode {
           </div>
         </section>
 
-        <section className={styles.missionvalues}>
-          <h2>Missão, Visão e Valores</h2>
-          <h3>Missão</h3>
+        <section className={styles.mission}>
+          <div className={styles.icon}>
+            <Target size={96} />
+            <h2>Missão</h2>
+          </div>
           <p>
             Transformar ideias em produtos digitais reais e escaláveis,
             entregando soluções relevantes com agilidade e propósito.
           </p>
-          <div className={styles.values}>
-            <h2>Valores</h2>
-            <div className={styles.valuesGrid}>
-              {values.map((item, id) => (
-                <div key={id} className={styles.valueCard}>
-                  <div>{item.icon}</div>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                </div>
-              ))}
-            </div>
+        </section>
+
+        <section className={styles.values}>
+          <h2>Valores</h2>
+          <div className={styles.valuesGrid}>
+            {values.map((item, id) => (
+              <div key={id} className={styles.valueCard}>
+                <div>{item.icon}</div>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </div>
+            ))}
           </div>
         </section>
 
-        <section>
+        <section className={styles.story}>
           <h2>Nossa História</h2>
-          <p>
-            A ideia de empreender juntos sempre esteve presente, mas foi com a
-            participação na 13ª edição da Campus Mobile, com o projeto Rural
-            Conecta, que entendemos o potencial de nossas colaborações. A partir
-            dessa experiência, passamos a formalizar nossa atuação e aplicar
-            nosso trabalho conjunto em projetos reais, impulsionando soluções
-            com foco em impacto e escalabilidade.
-          </p>
+          <div className={styles.storyGalery}>
+            <img
+              src={campus1Img}
+              alt="Foto da Apresentação teste na Campus Mobile"
+              loading="lazy"
+            />
+            <img
+              src={campus2Img}
+              alt="Foto da Apresentação rápida na Campus Mobile"
+              loading="lazy"
+            />
+          </div>
+
+          <div className={styles.storyText}>
+            <p>
+              A ideia de empreender juntos existe há anos, mas ganhou forma após
+              nossa participação na 13ª edição da{" "}
+              <a
+                href="https://www.institutoclaro.org.br/campus-mobile/"
+                target="_blank"
+              >
+                <b>Campus Mobile</b>
+              </a>
+              , promovida pelo Instituto Claro, em São Paulo. Foi lá que
+              apresentamos o Rural Conecta, um aplicativo em formato de
+              marketplace voltado para serviços rurais.
+            </p>
+            <p>
+              Apesar de nem todos estarmos presentes fisicamente no evento,
+              devido ao limite de participantes, cada integrante do grupo foi
+              essencial para o que construímos — desde a concepção da ideia até
+              a entrega final. Essa experiência reforçou nosso potencial
+              coletivo e nos mostrou o quanto somos capazes de realizar quando
+              unimos nossas competências e trabalhamos de forma colaborativa.
+            </p>
+            <p>
+              Desde então, estamos formalizando nossas operações e aplicando
+              nosso trabalho em equipe em projetos reais, inclusive nos projetos
+              individuais de cada membro, com o objetivo de levá-los a novos
+              patamares.
+            </p>
+          </div>
         </section>
 
         <section>
