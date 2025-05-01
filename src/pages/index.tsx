@@ -423,17 +423,17 @@ const testimonials = [
   {
     name: "Cliente A",
     comment: "Excelente serviço, superou minhas expectativas!",
-    photo: "/img/undraw_docusaurus_mountain.svg",
+    photo: "/img/logo-square.jpg",
   }, // Using existing svgs as placeholders
   {
     name: "Cliente B",
     comment: "Equipe muito profissional e atenciosa.",
-    photo: "/img/undraw_docusaurus_tree.svg",
+    photo: "/img/logo-square.jpg",
   },
   {
     name: "Cliente C",
     comment: "Resultados incríveis em pouco tempo.",
-    photo: "/img/undraw_docusaurus_react.svg",
+    photo: "/img/logo-square.jpg",
   },
 ];
 
@@ -635,24 +635,24 @@ function TestimonialsSection() {
 // --- Sub-component: FAQ Section ---
 const faqItems = [
   {
-    q: "Pergunta Frequente 1?",
-    a: "Resposta para a pergunta frequente número 1. Detalhes adicionais aqui.",
+    q: "O que é a Takeode?",
+    a: "Somos uma empresa de tecnologia especializada no desenvolvimento de soluções digitais sob medida, como apps, sistemas web e APIs.",
   },
   {
-    q: "Pergunta Frequente 2?",
-    a: "Resposta para a pergunta frequente número 2. Mais informações podem ser incluídas.",
+    q: "Quais tipos de serviços vocês oferecem?",
+    a: "Desenvolvimento de software, consultoria técnica, manutenção de sistemas, infraestrutura e automação de processos digitais.",
   },
   {
-    q: "Pergunta Frequente 3?",
-    a: "Resposta para a pergunta frequente número 3. Explicação completa.",
+    q: "Quais tecnologias vocês usam?",
+    a: "Trabalhamos com Laravel, React, Next.js, Node.js, Docker, PostgreSQL, MongoDB, Redis, entre outras.",
   },
   {
-    q: "Pergunta Frequente 4?",
-    a: "Resposta para a pergunta frequente número 4. Detalhes sobre o processo.",
+    q: "Como posso contratar a Takeode?",
+    a: "Entre em contato pelo nosso site, envie os detalhes do seu projeto e retornamos com uma proposta personalizada.",
   },
   {
-    q: "Pergunta Frequente 5?",
-    a: "Resposta para a pergunta frequente número 5. Outras considerações.",
+    q: "Vocês oferecem suporte após a entrega?",
+    a: "Sim. Garantimos suporte técnico, correções e evoluções conforme o contrato definido com o cliente.",
   },
 ];
 
@@ -832,11 +832,11 @@ export default function HomePage(): ReactNode {
       <main>
         {/* Include HomepageFeatures if desired, or remove */}
         {/* <HomepageFeatures /> */}
-        <ServicesSection />
-        <BudgetCTASection />
-        <DifferentialsSection />
+        {/* <ServicesSection /> */}
         <BusinessModelSection />
+        <DifferentialsSection />
         <TestimonialsSection />
+        <BudgetCTASection />
         <FaqSection />
       </main>
       {/* Use CustomFooter OR rely on Docusaurus theme footer configured in docusaurus.config.ts */}
