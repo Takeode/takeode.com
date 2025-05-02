@@ -1,0 +1,16 @@
+# Configuração do Lefthook para o projeto Takeode.com
+# Referência: https://lefthook.dev/configuration/
+
+# Hook de pre-commit: executa antes de cada commit para garantir a qualidade do código
+pre-commit:
+  parallel: true # Executa tarefas em paralelo para melhor performance
+  commands:
+    biome-check:
+      glob: "*.{js,jsx,ts,tsx,json}"
+      run: npm run check:fix -- {staged_files}
+      
+# Hook de pre-push: garante que todos os testes passem antes de enviar para o repositório remoto
+pre-push:
+  commands:
+    typecheck:
+      run: npm run typecheck
