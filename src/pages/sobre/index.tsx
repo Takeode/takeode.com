@@ -127,6 +127,7 @@ export default function About(): JSX.Element {
               <a
                 href="https://www.institutoclaro.org.br/campus-mobile/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <b>Campus Mobile</b>
               </a>
