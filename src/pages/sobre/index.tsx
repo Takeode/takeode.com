@@ -107,7 +107,7 @@ export default function About(): ReactNode {
 
         <section className={styles.story}>
           <h2>Nossa História</h2>
-          <div className={styles.storyGalery}>
+          <div className={styles.storyGallery}>
             <img
               src={campus1Img}
               alt="Foto da Apresentação teste na Campus Mobile"
