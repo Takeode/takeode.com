@@ -1,23 +1,44 @@
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
+joao:
+  name: João Pedro
+  title: Co-founder and COO @ Takeode
+  url: https://github.com/joao1barbosa
+  image_url: https://github.com/joao1barbosa.png
   page: true
   socials:
-    x: yangshunz
-    github: yangshun
+    x: joao1barbosa_
+    github: joao1barbosa
+    linkedin: joao1barbosa
 
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
-  page:
-    # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
+matheus:
+  name: Matheus Alencar
+  title: Co-founder and CMO @ Takeode
+  url: https://github.com/matheusalencardsgn
+  image_url: https://github.com/matheusalencardsgn.png
+  page: true
   socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
+    x: apenasaedes
+    github: matheusalencardsgn
+    linkedin: alencardsgn
+
+pauloe:
+  name: Paulo Éder
+  title: Co-founder and CEO @ Takeode
+  url: https://github.com/paulo-cardoso71
+  image_url: https://github.com/paulo-cardoso71.png
+  page: true
+  socials:
+    x: pcardoso0308
+    github: paulo-cardoso71
+    linkedin: paulo-cardoso71
+
+pauloh:
+  name: Paulo Hernane
+  title: Co-founder and CTO @ Takeode
+  url: https://github.com/PauloHFS
+  image_url: https://github.com/PauloHFS.png
+  page: true
+  socials:
+    x: paulo_hfs
+    github: PauloHFS
+    linkedin: paulohernane
+    newsletter: https://paulohfs.github.io/blog
