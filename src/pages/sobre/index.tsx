@@ -48,7 +48,7 @@ const values = [
 const campus1Img = require("@site/static/img/about/campus1.webp").default;
 const campus2Img = require("@site/static/img/about/campus2.webp").default;
 
-export default function About(): ReactNode {
+export default function About(): JSX.Element {
   return (
     <Layout
       title="Sobre nós"
