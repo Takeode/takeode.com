@@ -27,8 +27,22 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: 'pt-BR',
+    locales: ['pt-BR', 'en'],
+    localeConfigs: {
+      'pt-BR': {
+        label: 'Português (Brasil)',
+        direction: 'ltr',
+        htmlLang: 'pt-BR',
+        // To remove the locale from the path, use `path: '/docs/intro'`
+      },
+      'en': {
+        label: 'English',
+        direction: 'ltr',
+        htmlLang: 'en',
+        // To remove the locale from the path, use `path: '/docs/intro'`
+      },
+    },
   },
 
   presets: [
@@ -75,18 +89,7 @@ const config: Config = {
         src: "img/logo.svg",
       },
       items: [
-        // {
-        //   type: 'docSidebar',
-        //   sidebarId: 'tutorialSidebar',
-        //   position: 'left',
-        //   label: 'Tutorial',
-        // },
         { to: "/blog", label: "Blog", position: "right" },
-        // {
-        //   href: 'https://github.com/Takeode/takeode.com',
-        //   label: 'GitHub',
-        //   position: 'right',
-        // },
       ],
     },
     footer: {
@@ -122,13 +125,13 @@ const config: Config = {
               to: "/blog",
             },
             {
-              label: "GitHub",
-              href: "https://github.com/Takeode",
+              label: 'GitHub',
+              href: 'https://github.com/Takeode',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Takeode, Inc.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Takeode.`,
     },
     prism: {
       theme: prismThemes.github,
