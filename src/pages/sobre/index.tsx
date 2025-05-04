@@ -1,16 +1,16 @@
-import React, { ReactNode } from "react";
 import Layout from "@theme/Layout";
-import styles from "./about.module.css";
 import clsx from "clsx";
 import {
-  UserCheck,
-  SlidersHorizontal,
   Eye,
-  Lightbulb,
-  Handshake,
   Gauge,
+  Handshake,
+  Lightbulb,
+  SlidersHorizontal,
   Target,
+  UserCheck,
 } from "lucide-react";
+import React, { type JSX } from "react";
+import styles from "./about.module.css";
 
 const values = [
   {
@@ -42,6 +42,37 @@ const values = [
     icon: <Gauge size={42} />,
     title: "Eficiência",
     text: "Fazemos mais com menos — e com qualidade.",
+  },
+];
+
+const team = [
+  {
+    name: "Paulo Éder",
+    role: "CEO",
+    image: "https://github.com/paulo-cardoso71.png",
+    description:
+      "Graduando em Engenharia da Computação, possui 4 anos de experiência no setor de tecnologia, com foco nos últimos 2 anos em desenvolvimento backend.",
+  },
+  {
+    name: "Paulo Hernane",
+    role: "CTO",
+    image: "https://github.com/PauloHFS.png",
+    description:
+      "Graduando em Ciências da Computação com 5 anos de experiência em desenvolvimento fullstack e mobile. Bolsista em P&D com foco em LLMs na UFCG.",
+  },
+  {
+    name: "Matheus Alencar",
+    role: "CMO",
+    image: "https://github.com/matheusalencardsgn.png",
+    description:
+      "Graduando em Publicidade e Propaganda, com 8 anos de experiência em Design e especialização em marketing de conteúdo e UI/UX.",
+  },
+  {
+    name: "João Pedro",
+    role: "COO",
+    image: "https://github.com/joao1barbosa.png",
+    description:
+      "Graduando em Engenharia de Software com 2 anos de experiência em desenvolvimento Web e Mobile, além de atuação em infraestrutura de TI.",
   },
 ];
 
@@ -95,8 +126,8 @@ export default function About(): JSX.Element {
         <section className={styles.values}>
           <h2>Valores</h2>
           <div className={styles.valuesGrid}>
-            {values.map((item, id) => (
-              <div key={id} className={styles.valueCard}>
+            {values.map((item) => (
+              <div key={item.title} className={styles.valueCard}>
                 <div>{item.icon}</div>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
@@ -152,26 +183,28 @@ export default function About(): JSX.Element {
           </div>
         </section>
 
-        <section>
-          <h2>Equipe</h2>
-          <ul>
-            <li>
-              <strong>João Pedro:</strong> Engenheiro de Software FullStack
-            </li>
-            <li>
-              <strong>Matheus Alencar:</strong> UI/UX Designer, Marketing
-            </li>
-            <li>
-              <strong>Paulo Hernane:</strong> Engenheiro de Software FullStack
-            </li>
-            <li>
-              <strong>Paulo Éder:</strong> Engenheiro de Software BackEnd
-            </li>
-          </ul>
+        <section className={styles.team}>
+          <h2>Nosso Time</h2>
+          <div className={styles.teamGrid}>
+            {team.map((item) => (
+              <div key={item.role} className={styles.teamMember}>
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className={styles.teamImage}
+                />
+                <div className={styles.memberInfo}>
+                  <h3>{item.name}</h3>
+                  <strong>{item.role}</strong>
+                </div>
+                <p>{item.description}</p>
+              </div>
+            ))}
+          </div>
         </section>
 
-        <section>
-          <h2>O que nos diferencia</h2>
+        <section className={styles.difference}>
+          <h2>O que nos diferencia?</h2>
           <p>
             Com experiências plurais e complementares, nossa equipe é capaz de
             abordar os desafios sob diferentes perspectivas, o que resulta em
@@ -196,13 +229,18 @@ export default function About(): JSX.Element {
             <a
               href="https://www.instagram.com/takeodesolutions/"
               target="_blank"
+              rel="noreferrer"
             >
               Instagram
             </a>
-            <a href="https://www.linkedin.com/company/takeode/" target="_blank">
+            <a
+              href="https://www.linkedin.com/company/takeode/"
+              target="_blank"
+              rel="noreferrer"
+            >
               LinkedIn
             </a>
-            <a href="https://x.com/takeode_" target="_blank">
+            <a href="https://x.com/takeode_" target="_blank" rel="noreferrer">
               X (Twitter)
             </a>
           </div>

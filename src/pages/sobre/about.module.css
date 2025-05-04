@@ -1,196 +1,287 @@
 .hero {
-    background-image: url('/static/img/about/banner.jpg'); /* Substitua com o caminho da imagem */
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
+  background-image: url("/static/img/about/banner.jpg"); /* Substitua com o caminho da imagem */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
 }
-  
-.heroContent {
-    padding: 2rem;
-    border-radius: 12px;
 
-    h1 {
-        font-size: 6rem;
-    }
+.heroContent {
+  padding: 2rem;
+  border-radius: 12px;
+
+  h1 {
+    font-size: 6rem;
+  }
 }
-  
+
 .mainContent {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 1rem;
-    gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  gap: 3rem;
 }
 
 .whoweare {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    .highlight{
-        background-color: rgba(0, 0, 0, 0.3);
-        width: 85%;
-        padding: 1rem 8rem;
-        border-radius: 12px;
-        margin-bottom: 2rem;
+  .highlight {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 85%;
+    padding: 1rem 8rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
 
-        p{
-            font-size: 2.2rem;
-            font-weight: bold;
-        }
+    p {
+      font-size: 2.2rem;
+      font-weight: bold;
     }
+  }
 
-    .description{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 3rem;
-        flex-wrap: wrap;
-        
-        padding: 0rem 4rem;
-        
-        p{
-            flex: 1 1 45%;
-            font-size: 1.5rem;
-        }
-    }
-}
-
-.mission{
+  .description {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-wrap: wrap;
+
+    padding: 0rem 4rem;
+
+    p {
+      flex: 1 1 45%;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.mission {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+
+  .icon {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
     justify-content: center;
     align-items: center;
 
-    .icon {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        justify-content: center;
-        align-items: center;
-
-        h2{
-            font-size: 2rem;
-        }
+    h2 {
+      font-size: 2rem;
     }
+  }
 
-    p{
-        max-width: 60%;
-        font-size: 1.2rem;
-        text-align: center;
-    }
+  p {
+    max-width: 60%;
+    font-size: 1.2rem;
+    text-align: center;
+  }
 }
 
 .values {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 90%;
+  gap: 1.3rem;
+
+  h2 {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  .valuesGrid {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    width: 90%;
-    gap: 1.3rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
 
-    h2{
-        font-weight: bold;
-        font-size: 2rem;
-    }   
+    .valueCard {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      max-width: 18rem;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      padding: 1rem;
 
-    .valuesGrid{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 1rem;
-        align-items: stretch;
-        justify-content: center;
-        width: 100%;
+      h3 {
+        text-align: center;
+      }
 
-        .valueCard{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            height: 100%;
-            max-width: 18rem;
-            border-radius: 12px;
-            border: 1px solid #ccc;
-            padding: 1rem;
-
-            h3{
-                text-align: center;
-            }
-
-            p {
-                text-align: center;
-            }
-        }
-
-        .valueCard:hover {
-            transform: translateY(-5px) rotate(1deg);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
+      p {
+        text-align: center;
+      }
     }
+
+    .valueCard:hover {
+      transform: translateY(-5px) rotate(1deg);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+  }
 }
 
-.story{
+.story {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  align-items: center;
+
+  h2 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-left: 2rem;
+    align-self: start;
+  }
+
+  .storyGallery {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    img {
+      max-width: 40%;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+    }
+    img:hover {
+      transform: translateY(-5px) rotate(1deg);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+  }
+  @media (max-width: 768px) {
+    .storyGallery {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+        max-width: 80%;
+      }
+    }
+  }
+
+  .storyText {
     display: flex;
     flex-direction: column;
-    gap: 1.3rem;
     align-items: center;
 
-    h2{
-        font-weight: bold;
-        font-size: 2rem;
-        margin-left: 2rem;
-        align-self: start;
+    p {
+      text-align: justify;
+      font-size: 1.1rem;
+      width: 90%;
     }
-    
-    .storyGallery{
-        display: flex;
-        gap: 2rem;
-        flex-wrap: wrap;
-        justify-content: center;
+  }
+}
 
-        img{
-            max-width: 40%;
-            border-radius: 12px;
-            border: 1px solid #ccc;
-        }
-        img:hover {
-            transform: translateY(-5px) rotate(1deg);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
+.team {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  align-items: center;
+  width: 100%;
+
+  h2 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-right: 2rem;
+    align-self: end;
+  }
+
+  .teamGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    width: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    .teamGrid {
+      grid-template-columns: repeat(2, 1fr);
     }
+  }
 
-    .storyText{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        p{
-            text-align: justify;
-            font-size: 1.1rem;
-            width: 90%;
-        }
+  @media (max-width: 480px) {
+    .teamGrid {
+      grid-template-columns: 1fr;
     }
+  }
 
+  .teamMember {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(231, 31, 31, 0.1);
+    border: 1px solid #ccc;
+  }
+
+  .memberInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0rem;
+
+    h3 {
+      margin-bottom: 0.3rem;
+    }
+  }
+
+  .teamImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+  }
+}
+
+.difference {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.3rem;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  p {
+    text-align: justify;
+    font-size: 1.1rem;
+    width: 90%;
+  }
 }
 
 .cta {
-    margin-top: 4rem;
-    text-align: center;
+  margin-top: 4rem;
+  text-align: center;
 
-    .links {
-        margin-top: 1rem;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        justify-content: center;
-    }
+  .links {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
 }
-  
-  
