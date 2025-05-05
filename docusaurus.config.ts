@@ -44,6 +44,10 @@ const config: Config = {
       },
     },
   },
+  // Google Analytics plugin configuration
+  // This plugin integrates Google Analytics (via gtag.js) to track website usage.
+  // The `trackingID` is the unique identifier for the Google Analytics property.
+  // The `anonymizeIP` option ensures that IP addresses are anonymized to comply with privacy regulations.
   plugins: [
     [
       "@docusaurus/plugin-google-gtag",
