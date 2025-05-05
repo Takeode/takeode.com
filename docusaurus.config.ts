@@ -34,13 +34,13 @@ const config: Config = {
         label: 'Português (Brasil)',
         direction: 'ltr',
         htmlLang: 'pt-BR',
-        // To remove the locale from the path, use `path: '/docs/intro'`
+        path: '/', // Remove o idioma do caminho da URL
       },
       'en': {
         label: 'English',
         direction: 'ltr',
         htmlLang: 'en',
-        // To remove the locale from the path, use `path: '/docs/intro'`
+        path: 'en', // Mantém o idioma no caminho da URL
       },
     },
   },
@@ -90,6 +90,10 @@ const config: Config = {
       },
       items: [
         { to: "/blog", label: "Blog", position: "right" },
+        {
+          type: "localeDropdown",
+          position: "right",
+        },
       ],
     },
     footer: {
