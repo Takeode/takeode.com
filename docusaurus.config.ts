@@ -27,24 +27,36 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'pt-BR',
-    locales: ['pt-BR', 'en'],
+    defaultLocale: "pt-BR",
+    locales: ["pt-BR", "en"],
     localeConfigs: {
-      'pt-BR': {
-        label: 'Português (Brasil)',
-        direction: 'ltr',
-        htmlLang: 'pt-BR',
+      "pt-BR": {
+        label: "Português (Brasil)",
+        direction: "ltr",
+        htmlLang: "pt-BR",
         // To remove the locale from the path, use `path: '/docs/intro'`
       },
-      'en': {
-        label: 'English',
-        direction: 'ltr',
-        htmlLang: 'en',
+      en: {
+        label: "English",
+        direction: "ltr",
+        htmlLang: "en",
         // To remove the locale from the path, use `path: '/docs/intro'`
       },
     },
   },
-
+  // Google Analytics plugin configuration
+  // This plugin integrates Google Analytics (via gtag.js) to track website usage.
+  // The `trackingID` is the unique identifier for the Google Analytics property.
+  // The `anonymizeIP` option ensures that IP addresses are anonymized to comply with privacy regulations.
+  plugins: [
+    [
+      "@docusaurus/plugin-google-gtag",
+      {
+        trackingID: "G-KYMYKXYMGN",
+        anonymizeIP: true,
+      },
+    ],
+  ],
   presets: [
     [
       "classic",
@@ -88,9 +100,7 @@ const config: Config = {
         alt: "Takeode Logo",
         src: "img/logo.svg",
       },
-      items: [
-        { to: "/blog", label: "Blog", position: "right" },
-      ],
+      items: [{ to: "/blog", label: "Blog", position: "right" }],
     },
     footer: {
       style: "dark",
@@ -125,8 +135,8 @@ const config: Config = {
               to: "/blog",
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/Takeode',
+              label: "GitHub",
+              href: "https://github.com/Takeode",
             },
           ],
         },
