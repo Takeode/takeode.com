@@ -27,20 +27,20 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'pt-BR',
-    locales: ['pt-BR', 'en'],
+    defaultLocale: "pt-BR",
+    locales: ["pt-BR", "en"],
     localeConfigs: {
-      'pt-BR': {
-        label: 'Português (Brasil)',
-        direction: 'ltr',
-        htmlLang: 'pt-BR',
-        path: '/', // Remove o idioma do caminho da URL
+      "pt-BR": {
+        label: "Português (Brasil)",
+        direction: "ltr",
+        htmlLang: "pt-BR",
+        path: "/", // Remove o idioma do caminho da URL
       },
-      'en': {
-        label: 'English',
-        direction: 'ltr',
-        htmlLang: 'en',
-        path: 'en', // Mantém o idioma no caminho da URL
+      en: {
+        label: "English",
+        direction: "ltr",
+        htmlLang: "en",
+        path: "en", // Mantém o idioma no caminho da URL
       },
     },
   },
@@ -129,8 +129,8 @@ const config: Config = {
               to: "/blog",
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/Takeode',
+              label: "GitHub",
+              href: "https://github.com/Takeode",
             },
           ],
         },
