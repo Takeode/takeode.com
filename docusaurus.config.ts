@@ -44,7 +44,15 @@ const config: Config = {
       },
     },
   },
-
+  plugins: [
+    [
+      "@docusaurus/plugin-google-gtag",
+      {
+        trackingID: "G-KYMYKXYMGN", // Substitua pelo seu ID de rastreamento do Google Analytics
+        anonymizeIP: true, // Opcional: Anonimiza os IPs enviados
+      },
+    ],
+  ],
   presets: [
     [
       "classic",
