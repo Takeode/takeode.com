@@ -31,18 +31,17 @@ const config: Config = {
     locales: ["pt-BR", "en"],
     localeConfigs: {
       "pt-BR": {
+        path: "pt-BR",
         label: "Português (Brasil)",
-        direction: "ltr",
-        htmlLang: "pt-BR",
-        path: "/", // Remove o idioma do caminho da URL
       },
       en: {
+        path: "en",
         label: "English",
-        direction: "ltr",
-        htmlLang: "en",
-        path: "en", // Mantém o idioma no caminho da URL
       },
     },
+  },
+  customFields: {
+    outputDir: "i18n", // Custom field for translation output directory
   },
   // Google Analytics plugin configuration
   // This plugin integrates Google Analytics (via gtag.js) to track website usage.

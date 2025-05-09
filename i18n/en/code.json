@@ -324,6 +324,50 @@
   },
   "homepage.hero.button.aria": {
     "message": "Learn more about our services",
-    "description": "Aria label for Learn More button"
+    "description": "Aria label for Saiba Mais button"
+  },
+  "services.consulting.title": {
+    "message": "Consultoria Estratégica",
+    "description": "Service title for consulting"
+  },
+  "services.consulting.description": {
+    "message": "Análise e planejamento para otimizar seus resultados.",
+    "description": "Service description for consulting"
+  },
+  "services.webdev.title": {
+    "message": "Desenvolvimento Web",
+    "description": "Service title for web development"
+  },
+  "services.webdev.description": {
+    "message": "Criação de sites e aplicações modernas e responsivas.",
+    "description": "Service description for web development"
+  },
+  "services.marketing.title": {
+    "message": "Marketing Digital",
+    "description": "Service title for digital marketing"
+  },
+  "services.marketing.description": {
+    "message": "Estratégias para aumentar sua visibilidade online.",
+    "description": "Service description for digital marketing"
+  },
+  "form.error.required": {
+    "message": "Campo obrigatório",
+    "description": "Error message for required field"
+  },
+  "form.error.invalidEmail": {
+    "message": "Email inválido",
+    "description": "Error message for invalid email"
+  },
+  "form.error.invalidPhone": {
+    "message": "Telefone inválido",
+    "description": "Error message for invalid phone"
+  },
+  "cta.title": {
+    "message": "Pronto para começar?",
+    "description": "CTA section title"
+  },
+  "cta.subtitle": {
+    "message": "Solicite um orçamento sem compromisso.",
+    "description": "CTA section subtitle"
   }
 }

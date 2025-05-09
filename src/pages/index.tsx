@@ -1,11 +1,11 @@
 import Link from "@docusaurus/Link";
+import Translate, { translate } from "@docusaurus/Translate";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Heading from "@theme/Heading";
 import Layout from "@theme/Layout";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import { type ReactNode, useState } from "react";
-import Translate, { translate } from "@docusaurus/Translate";
 
 import styles from "./index.module.css";
 
@@ -35,8 +35,9 @@ function HeroSection() {
             <Translate
               id="homepage.hero.title"
               description="Hero section title"
+              values={{ title: siteConfig.title }}
             >
-              {siteConfig.title}
+              {"{title}"}
             </Translate>
           </Heading>
           <Heading
@@ -48,8 +49,9 @@ function HeroSection() {
             <Translate
               id="homepage.hero.tagline"
               description="Hero section tagline"
+              values={{ tagline: siteConfig.tagline }}
             >
-              {siteConfig.tagline}
+              {"{tagline}"}
             </Translate>
           </Heading>
         </motion.div>
