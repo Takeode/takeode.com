@@ -102,8 +102,8 @@ const config: Config = {
         srcDark: "img/logo-dark.png", // Adicione esta linha para suportar logo diferente no tema escuro
       },
       items: [
-        { to: '/sobre', label: "Sobre nós", position: "right" },
-        { to: "/blog", label: "Blog", position: "right" }
+        { to: "/sobre", label: "Sobre nós", position: "right" },
+        { to: "/blog", label: "Blog", position: "right" },
       ],
     },
     footer: {
@@ -158,59 +158,61 @@ const config: Config = {
       tagName: "meta",
       attributes: {
         property: "og:title",
-        content: "Takeode - Soluções Digitais Inovadoras"
-      }
+        content: "Takeode - Soluções Digitais Inovadoras",
+      },
     },
     {
       tagName: "meta",
       attributes: {
         property: "og:description",
-        content: "Takeode oferece soluções digitais personalizadas: consultoria estratégica, desenvolvimento web moderno, e marketing digital focado em resultados."
-      }
+        content:
+          "Takeode oferece soluções digitais personalizadas: consultoria estratégica, desenvolvimento web moderno, e marketing digital focado em resultados.",
+      },
     },
     {
       tagName: "meta",
       attributes: {
         property: "og:image",
-        content: "https://takeode.com/img/social-card.png"
-      }
+        content: "https://takeode.com/img/social-card.png",
+      },
     },
     {
       tagName: "meta",
       attributes: {
         property: "og:url",
-        content: "https://takeode.com"
-      }
+        content: "https://takeode.com",
+      },
     },
     {
       tagName: "meta",
       attributes: {
         name: "twitter:card",
-        content: "summary_large_image"
-      }
+        content: "summary_large_image",
+      },
     },
     {
       tagName: "meta",
       attributes: {
         name: "twitter:title",
-        content: "Takeode - Soluções Digitais Inovadoras"
-      }
+        content: "Takeode - Soluções Digitais Inovadoras",
+      },
     },
     {
       tagName: "meta",
       attributes: {
         name: "twitter:description",
-        content: "Takeode oferece soluções digitais personalizadas: consultoria estratégica, desenvolvimento web moderno, e marketing digital focado em resultados."
-      }
+        content:
+          "Takeode oferece soluções digitais personalizadas: consultoria estratégica, desenvolvimento web moderno, e marketing digital focado em resultados.",
+      },
     },
     {
       tagName: "meta",
       attributes: {
         name: "twitter:image",
-        content: "https://takeode.com/img/social-card.png"
-      }
-    }
-  ]
+        content: "https://takeode.com/img/social-card.png",
+      },
+    },
+  ],
 };
 
 export default config;

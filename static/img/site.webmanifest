@@ -20,11 +20,7 @@
   "background_color": "#0e1117",
   "display": "standalone",
   "orientation": "portrait",
-  "categories": [
-    "technology",
-    "development",
-    "innovation"
-  ],
+  "categories": ["technology", "development", "innovation"],
   "screenshots": [
     {
       "src": "/img/social-card.png",
