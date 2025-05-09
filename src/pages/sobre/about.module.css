@@ -1,9 +1,9 @@
 .hero {
-  background-image: url("/static/img/about/banner.jpg"); /* Substitua com o caminho da imagem */
+  background-image: var(--hero-background-image);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  height: 60vh;
+  height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
