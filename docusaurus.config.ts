@@ -31,18 +31,17 @@ const config: Config = {
     locales: ["pt-BR", "en"],
     localeConfigs: {
       "pt-BR": {
+        path: "pt-BR",
         label: "Português (Brasil)",
-        direction: "ltr",
-        htmlLang: "pt-BR",
-        // To remove the locale from the path, use `path: '/docs/intro'`
       },
       en: {
+        path: "en",
         label: "English",
-        direction: "ltr",
-        htmlLang: "en",
-        // To remove the locale from the path, use `path: '/docs/intro'`
       },
     },
+  },
+  customFields: {
+    outputDir: "i18n", // Custom field for translation output directory
   },
   // Google Analytics plugin configuration
   // This plugin integrates Google Analytics (via gtag.js) to track website usage.
@@ -104,6 +103,10 @@ const config: Config = {
       items: [
         { to: "/sobre", label: "Sobre nós", position: "right" },
         { to: "/blog", label: "Blog", position: "right" },
+        {
+          type: "localeDropdown",
+          position: "right",
+        },
       ],
     },
     footer: {

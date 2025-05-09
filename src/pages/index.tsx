@@ -1,12 +1,13 @@
 import Link from "@docusaurus/Link";
+import Translate, { translate } from "@docusaurus/Translate";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Heading from "@theme/Heading";
 import Layout from "@theme/Layout";
 import clsx from "clsx";
-import { motion } from "framer-motion"; // Import framer-motion
+import { motion } from "framer-motion";
 import { type ReactNode, useState } from "react";
 
-import styles from "./index.module.css"; // Reuse existing CSS module
+import styles from "./index.module.css";
 
 // --- Sub-component: Hero Section ---
 function HeroSection() {
@@ -17,7 +18,7 @@ function HeroSection() {
         "hero hero--primary",
         styles.heroBanner,
         styles.heroCustom
-      )} // Add a custom class if needed
+      )}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -31,7 +32,13 @@ function HeroSection() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <Heading as="h1" className="hero__title">
-            {siteConfig.title} {/* Or custom title */}
+            <Translate
+              id="homepage.hero.title"
+              description="Hero section title"
+              values={{ title: siteConfig.title }}
+            >
+              {"{title}"}
+            </Translate>
           </Heading>
           <Heading
             as="h2"
@@ -39,7 +46,13 @@ function HeroSection() {
           >
             {" "}
             {/* Optional subtitle class */}
-            {siteConfig.tagline} {/* Or custom subtitle */}
+            <Translate
+              id="homepage.hero.tagline"
+              description="Hero section tagline"
+              values={{ tagline: siteConfig.tagline }}
+            >
+              {"{tagline}"}
+            </Translate>
           </Heading>
         </motion.div>
         <motion.div
@@ -51,9 +64,15 @@ function HeroSection() {
           <Link
             className="button button--secondary button--lg"
             to="#contact" // Link to contact/budget section or another page
-            aria-label="Saiba mais sobre nossos serviços"
+            aria-label={translate({
+              id: "homepage.hero.button.aria",
+              message: "Saiba mais sobre nossos serviços",
+              description: "Aria label for Saiba Mais button",
+            })}
           >
-            Saiba Mais
+            <Translate id="homepage.hero.button.text" description="Button text">
+              Saiba Mais
+            </Translate>
           </Link>
         </motion.div>
       </div>
@@ -73,18 +92,42 @@ const PlaceholderIcon = (props) => (
 
 const services = [
   {
-    title: "Consultoria Estratégica",
-    description: "Análise e planejamento para otimizar seus resultados.",
+    title: translate({
+      id: "services.consulting.title",
+      message: "Consultoria Estratégica",
+      description: "Service title for consulting",
+    }),
+    description: translate({
+      id: "services.consulting.description",
+      message: "Análise e planejamento para otimizar seus resultados.",
+      description: "Service description for consulting",
+    }),
     icon: PlaceholderIcon,
   },
   {
-    title: "Desenvolvimento Web",
-    description: "Criação de sites e aplicações modernas e responsivas.",
+    title: translate({
+      id: "services.webdev.title",
+      message: "Desenvolvimento Web",
+      description: "Service title for web development",
+    }),
+    description: translate({
+      id: "services.webdev.description",
+      message: "Criação de sites e aplicações modernas e responsivas.",
+      description: "Service description for web development",
+    }),
     icon: PlaceholderIcon,
   },
   {
-    title: "Marketing Digital",
-    description: "Estratégias para aumentar sua visibilidade online.",
+    title: translate({
+      id: "services.marketing.title",
+      message: "Marketing Digital",
+      description: "Service title for digital marketing",
+    }),
+    description: translate({
+      id: "services.marketing.description",
+      message: "Estratégias para aumentar sua visibilidade online.",
+      description: "Service description for digital marketing",
+    }),
     icon: PlaceholderIcon,
   },
 ];
@@ -139,16 +182,27 @@ function BudgetCTASection() {
   const validateField = (name, value) => {
     let error = "";
     if (!value) {
-      error = "Campo obrigatório";
+      error = translate({
+        id: "form.error.required",
+        message: "Campo obrigatório",
+        description: "Error message for required field",
+      });
     } else if (name === "email" && !/\S+@\S+\.\S+/.test(value)) {
-      error = "Email inválido";
+      error = translate({
+        id: "form.error.invalidEmail",
+        message: "Email inválido",
+        description: "Error message for invalid email",
+      });
     } else if (
       name === "phone" &&
       value &&
       !/^\d{10,}$/.test(value.replace(/\D/g, ""))
     ) {
-      // Basic phone validation (at least 10 digits), only if provided
-      error = "Telefone inválido";
+      error = translate({
+        id: "form.error.invalidPhone",
+        message: "Telefone inválido",
+        description: "Error message for invalid phone",
+      });
     }
     setErrors((prev) => ({ ...prev, [name]: error }));
     return !error;
@@ -157,30 +211,24 @@ function BudgetCTASection() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-    // Validate on change only after first interaction or on blur for better UX,
-    // but for simplicity, validating on change here.
     validateField(name, value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     let isValid = true;
-    // Validate required fields on submit
     if (!validateField("name", formData.name)) isValid = false;
     if (!validateField("email", formData.email)) isValid = false;
-    // Validate phone only if it has a value
     if (formData.phone && !validateField("phone", formData.phone))
       isValid = false;
 
     if (isValid) {
       console.log("Form submitted:", formData);
-      // Add actual form submission logic here (e.g., API call)
       alert("Orçamento solicitado com sucesso!");
-      setFormData({ name: "", email: "", phone: "" }); // Reset form
+      setFormData({ name: "", email: "", phone: "" });
       setErrors({ name: "", email: "", phone: "" });
     } else {
       console.log("Form has errors:", errors);
-      // Optionally focus the first field with an error
     }
   };
 
@@ -192,9 +240,15 @@ function BudgetCTASection() {
       <div className="container">
         <div className="row">
           <div className="col col--8 col--offset-2 text--center">
-            <Heading as="h2">Pronto para começar?</Heading>
+            <Heading as="h2">
+              <Translate id="cta.title" description="CTA section title">
+                Pronto para começar?
+              </Translate>
+            </Heading>
             <p className={styles.ctaSubtitle}>
-              Solicite um orçamento sem compromisso.
+              <Translate id="cta.subtitle" description="CTA section subtitle">
+                Solicite um orçamento sem compromisso.
+              </Translate>
             </p>
             <motion.form
               onSubmit={handleSubmit}
@@ -203,7 +257,7 @@ function BudgetCTASection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.5 }}
-              noValidate // Disable browser default validation bubbles
+              noValidate
             >
               <div className={styles.formGroup}>
                 <label htmlFor="cta-name" className={styles.visuallyHidden}>
