@@ -44,7 +44,19 @@ const config: Config = {
       },
     },
   },
-
+  // Google Analytics plugin configuration
+  // This plugin integrates Google Analytics (via gtag.js) to track website usage.
+  // The `trackingID` is the unique identifier for the Google Analytics property.
+  // The `anonymizeIP` option ensures that IP addresses are anonymized to comply with privacy regulations.
+  plugins: [
+    [
+      "@docusaurus/plugin-google-gtag",
+      {
+        trackingID: "G-KYMYKXYMGN",
+        anonymizeIP: true,
+      },
+    ],
+  ],
   presets: [
     [
       "classic",
@@ -86,9 +98,11 @@ const config: Config = {
       title: "Takeode",
       logo: {
         alt: "Takeode Logo",
-        src: "img/logo.svg",
+        src: "img/logo.png",
+        srcDark: "img/logo-dark.png", // Adicione esta linha para suportar logo diferente no tema escuro
       },
       items: [
+        { to: "/sobre", label: "Sobre nós", position: "right" },
         { to: "/blog", label: "Blog", position: "right" },
         {
           type: "localeDropdown",
@@ -142,6 +156,67 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+
+  headTags: [
+    {
+      tagName: "meta",
+      attributes: {
+        property: "og:title",
+        content: "Takeode - Soluções Digitais Inovadoras",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        property: "og:description",
+        content:
+          "Takeode oferece soluções digitais personalizadas: consultoria estratégica, desenvolvimento web moderno, e marketing digital focado em resultados.",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        property: "og:image",
+        content: "https://takeode.com/img/social-card.png",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        property: "og:url",
+        content: "https://takeode.com",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        name: "twitter:title",
+        content: "Takeode - Soluções Digitais Inovadoras",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        name: "twitter:description",
+        content:
+          "Takeode oferece soluções digitais personalizadas: consultoria estratégica, desenvolvimento web moderno, e marketing digital focado em resultados.",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        name: "twitter:image",
+        content: "https://takeode.com/img/social-card.png",
+      },
+    },
+  ],
 };
 
 export default config;
