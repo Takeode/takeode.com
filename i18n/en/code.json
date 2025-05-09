@@ -309,5 +309,21 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tags",
     "description": "The title of the tag list page"
+  },
+  "homepage.hero.title": {
+    "message": "Welcome to Takeode",
+    "description": "Hero section title"
+  },
+  "homepage.hero.tagline": {
+    "message": "From concept to code, no shortcuts.",
+    "description": "Hero section tagline"
+  },
+  "homepage.hero.button.text": {
+    "message": "Learn More",
+    "description": "Button text"
+  },
+  "homepage.hero.button.aria": {
+    "message": "Learn more about our services",
+    "description": "Aria label for Learn More button"
   }
 }

@@ -309,5 +309,21 @@
   "theme.tags.tagsPageTitle": {
     "message": "Marcadores",
     "description": "The title of the tag list page"
+  },
+  "homepage.hero.title": {
+    "message": "Bem-vindo à Takeode",
+    "description": "Hero section title"
+  },
+  "homepage.hero.tagline": {
+    "message": "Do conceito ao código, sem atalhos.",
+    "description": "Hero section tagline"
+  },
+  "homepage.hero.button.text": {
+    "message": "Saiba Mais",
+    "description": "Button text"
+  },
+  "homepage.hero.button.aria": {
+    "message": "Saiba mais sobre nossos serviços",
+    "description": "Aria label for Saiba Mais button"
   }
 }
