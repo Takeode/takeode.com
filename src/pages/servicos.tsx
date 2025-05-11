@@ -8,7 +8,7 @@ import Link from '@docusaurus/Link'; // Importe o componente Link
 // Mantenha a importação das imagens se quiser usá-las na visão geral
 const WebDevImg = require('@site/static/img/web-development.jpg').default;
 const MvpAppsImg = require('@site/static/img/mvp-apps.png').default;
-const DesignImg = require('@site/static/img/desing-uxui.jpg').default; // Corrigido 'desing' para 'design' no nome da variável, se o arquivo for 'design'
+const DesignImg = require('@site/static/img/design-uxui.jpg').default; // Corrigido 'desing' para 'design' no nome da variável, se o arquivo for 'design'
 
 // O cabeçalho pode continuar o mesmo
 function ServicesHeader() {
