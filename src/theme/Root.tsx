@@ -1,5 +1,5 @@
 import React, { JSX } from 'react';
-import ChatWidget from '../components/HomepageFeatures/ChatWidget';
+import ChatWidget from '../ChatWidget';
 
 // Componente Root que envolve toda a aplicação Docusaurus
 export default function Root({children}): JSX.Element {
