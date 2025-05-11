@@ -1,8 +1,8 @@
-import React, { JSX } from 'react';
+import React, { JSX, ReactNode } from 'react';
 import ChatWidget from '../ChatWidget';
 
 // Componente Root que envolve toda a aplicação Docusaurus
-export default function Root({children}): JSX.Element {
+export default function Root({ children }: { children: ReactNode }): JSX.Element {
   return (
     <>
       {children}
