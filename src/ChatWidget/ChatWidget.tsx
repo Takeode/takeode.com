@@ -83,11 +83,7 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({
                   src="/img/whatsapp-icon.png" 
                   alt="WhatsApp" 
                   className={styles.optionIcon}
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.onerror = null;
-                    target.style.display = 'none';
-                  }} 
+                  onError={handleImageError} 
                 />
                 WhatsApp
               </button>
